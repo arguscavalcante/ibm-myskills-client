@@ -1,0 +1,76 @@
+<ion-view view-title="Pesquisa Oi">
+
+  <ion-header-bar class="bar-dark">
+    <div class="buttons" ng-show="!isBeginning()">
+      <button class="button button-clear ion-android-arrow-back" ng-click="slidePrev()"></button>
+    </div>
+    <h1 class="title">{{nome}}</h1>
+    <div class="buttons">
+      <button class="button button-clear icon ion-home" ng-click="goTo ('categoria')"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+  </ion-content>
+    <ion-slides  options="options" slider="data.slider" style="background-color:{{corSecundaria}}">
+
+      <ion-slide-page ng-repeat="questao in questoes" item="questao">
+
+          <ion-content scroll="true">
+          <div class="row-center" style="background-color:white;height:30%;min-height:160px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset">
+              <div class="col col-top" style="height:35%">
+                <div class="row row-center">
+                  <div class="col col-80">
+                    <div class="col col-center">
+                    <progress max="100" value="{{getProgress()}}"></progress>
+                  </div>
+                  </div>
+
+                  <div class="col col-20">
+                    <center><p style="color:{{cor}};font-size:14px;font-weight:bold">{{getProgress()}} %</p></center>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="col col-center" style="height:45%">
+              <center><p>{{questao.texto}}</p></center>
+            </div>
+
+            <div class="col col-bottom" style="height:20%">
+              <div class="col col-20 col-offset-80" style="color:{{cor}};font-size:14px;font-weight:bold"><center>{{formattedTime}}</center></div>
+            </div>
+          </div>
+
+            <div class="row-center" style="background-color:{{corSecundaria}};height:70%;min-height:300px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset">
+
+                <div class="col col-top"></div>
+
+                <div class="col col-center">
+                  <div class="list" style="background-color:{{corSecundaria}}" ng-repeat="resposta in questao.opcoesResposta" >
+                   <a class="button button-full" style="background-color:{{corSecundaria}};font-weight: bold;text-align:left" ng-click="click(resposta, $parent.$index)" ng-class="{'button button-full button-positive':categoriaAvaliacao.questoes[$parent.$index].resposta.id == resposta.id, 'button button-full':categoriaAvaliacao.questoes[$parent.$index].resposta.id != resposta.id}">{{resposta.texto}}</a>
+                 </div>
+               </div>
+
+               <div class="col col-bottom"></div>
+            </div>
+
+          </ion-content>
+
+
+
+      </ion-slide-page>
+    </ion-slides>
+    <ion-footer-bar class="bar bar-footer bar-dark">
+
+      <div class="row-center">
+      <div class="title" ng-click="submitEnquiry()" ng-show="isEnd() && !completa"><center>Submeter respostas</center></div>
+
+      <div class="title" ng-click="goTo('categoria')" ng-show="isEnd() && completa"><center>Voltar para Categorias</center></div>
+
+      <div class="title" ng-click="slideNext()" ng-show="!isEnd()"><center>Próximo</center></div>
+    </div>
+  </ion-footer-bar>
+
+
+
+</ion-view>

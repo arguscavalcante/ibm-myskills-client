@@ -1,0 +1,29 @@
+<ion-view view-title="MySkills">
+  <ion-content scroll="true" style="background-color:#4D4D4D">
+<div class="row" style="height:10%"></div>
+    <div class="row" style="height:65%">
+      <div class="row-center">
+      <img  class="full-image" src="img/login.png">
+    </div>
+    </div>
+<div class = "row-center" style="height:25%" >
+  <div class="col col-top" style="background-color:#4D4D4D">
+    <label class="item item-input"  style="background-color:#4D4D4D" >
+      <i class="icon ion-ios-person placeholder-icon" style="font-size:25px;background-color:#4D4D4D;color:white"></i>
+      <input type="text" placeholder="Nome" ng-model="usuario.nome" style="background-color:#4D4D4D;color:white">
+    </label>
+  </div>
+  <div class="col col-bottom" style="background-color:#4D4D4D">
+    <label class="item item-input" style="background-color:#4D4D4D" >
+      <i class="icon ion-ios-email-outline placeholder-icon" style="font-size:25px;background-color:#4D4D4D;color:white"></i>
+      <input type="text" placeholder="E-Mail" style="background-color:#4D4D4D;color:white" ng-model="usuario.email">
+    </label>
+  </div>
+</div>
+
+</ion-content>
+<ion-footer-bar class="bar bar-footer bar-calm"  >
+<div class="title" ng-click="goTo('instrucoes')"><center>Entrar</center></div>
+
+</ion-footer-bar>
+</ion-view>

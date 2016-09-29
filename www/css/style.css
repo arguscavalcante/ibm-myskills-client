@@ -1,0 +1,143 @@
+/* Empty. Add your own CSS if you like */
+div.container {
+    height: 13%; }
+div.smallBoardlessContainer {
+    height: 4%; }
+div.spacerContainer {
+        height: 7%; }
+
+
+
+.button-float-time{
+  color:white !important;
+  z-index: 12 !important;
+  position: absolute !important;
+  bottom: 14px !important;
+  right: 14px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transition: 0.2s linear !important;
+  transition: 0.2s linear !important;
+  -webkit-transition-property: -webkit-transform, all !important;
+  transition-property: transform, all !important;
+}
+.button-float-time:hover{
+-webkit-transform: translate3d(0, -1px, 0)  !important;
+transform: translate3d(0, -1px, 0) !important;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+  background: darken(25%) !important;
+}
+
+.button-float{
+      color:white !important;
+      z-index: 12 !important;
+      border-radius: 50% !important;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-transition: 0.2s linear !important;
+      transition: 0.2s linear !important;
+      -webkit-transition-property: -webkit-transform, all !important;
+      transition-property: transform, all !important;
+    }
+  .button-float:hover{
+  -webkit-transform: translate3d(0, -1px, 0)  !important;
+  transform: translate3d(0, -1px, 0) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+    background: darken(10%) !important;
+}
+.fill-height-or-more {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.fill-height-or-more > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+input::-webkit-input-placeholder {
+    color: white;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: white;
+}
+input:-moz-placeholder {
+    color: white;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: white;
+}
+input::-moz-placeholder {
+    color: white;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: white;
+}
+input:-ms-input-placeholder {
+    color: white;
+}
+progress[value] {
+  -webkit-appearance: none;
+   appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  height: 7px;
+  background-color: #D6D6D6;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #3299E6;
+  border-radius: 2px;
+}
+
+progress::-moz-progress-bar {
+  height: 7px;
+  background-color: #D6D6D6;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}

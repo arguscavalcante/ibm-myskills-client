@@ -1,0 +1,43 @@
+<ion-view view-title="MySkills">
+
+
+
+          <ion-header-bar class="bar-dark">
+            <div class="buttons" ng-show="!isBeginning()">
+              <button class="button button-clear icon ion-android-exit" ng-click="goTo('login')"></button>
+            </div>
+            <h1 class="title"><center>Avaliações</center></h1>
+            <div class="buttons">
+              <button class="button button-clear icon ion-information-circled" ng-click="goTo('instrucoes')"></button>
+            </div>
+          </ion-header-bar>
+
+
+          <ion-content scroll="true">
+
+
+          <div class="list">
+
+            <div class="item item-text-wrap" ng-repeat="template in templates" item="template" style="color:black" ng-click="selectItem(template)">
+              <div class="row row-center">
+                <div style="background-color:{{template.cor}};color:black;width:2%;height:6%">
+                  &nbsp;
+                </div>
+                <div class="col col-80" style="margin:5px">
+                  {{template.nome}}
+                </div>
+                <div class="col-10" style="font-size:20px;color:#689676;margin:5px" ng-show="!isAvaliacaoCompleta(template)"></div>
+                <div class="col-10" style="font-size:20px;color:#689676;margin:5px" ng-show="isAvaliacaoCompleta(template)">
+                  <p><center>{{getGradeForEval(template)/10}}</center></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+  </ion-content>
+  <button class="button button-float-time" style="background-color:{{cor}};font-size:14px;color:white" ng-show="isRunning" ng-click="goBackToTest()">
+        <p>{{formattedTime}}</p>
+      </button>
+</ion-view>

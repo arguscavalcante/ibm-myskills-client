@@ -1,0 +1,51 @@
+<ion-view view-title="Pesquisa Oi" >
+
+
+
+          <ion-header-bar class="bar-dark">
+
+            <div class="buttons">
+              <button class="button button-clear ion-chevron-left" ng-click="goBack('categoria')"></button>
+            </div>
+            <h1 class="title">{{nome}}</h1>
+
+          </ion-header-bar>
+
+          <ion-content scroll="false" style="background-color:{{cor}}">
+
+            <div class="smallBoardlessContainer row-center"></div>
+
+          <div class="row row-center">
+            <div class="col col-100 col-center">
+              <center>
+                <h1  style="color:white;">{{nome}}</h1>
+              </center>
+            </div>
+          </div>
+          </ion-content>
+          <ion-content style="top:40%" scroll="true" style="background-color:{{cor}}">
+            <div class="row row-center">
+              <div class="col col-100 col-center" style="color:white">
+                <center>
+            <p>{{descricao}}</p>
+            <p>Tempo de avaliação: {{tempo}} minutos</p>
+          </center>
+            </div>
+          </div>
+
+          </ion-content>
+<ion-content style="top:70%" scroll="false" style="background-color:{{cor}}">
+<div class="row row-center">
+  <div class="col col-100 col-center">
+    <center>
+    <button class="button button-float" style="background-color:{{corSecundaria}}" ng-click="initAval()">
+      <i class="icon ion-android-arrow-forward" style="font-size:20px"></i>
+    </button>
+  </center>
+  </div>
+</div>
+</ion-content>
+
+
+
+</ion-view>

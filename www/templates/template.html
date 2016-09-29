@@ -1,0 +1,82 @@
+<ion-view view-title="My Page">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Title</h1>
+  </ion-header-bar>
+
+  <ion-content scroll="false">
+
+
+    <div class="row row-center" style="border: 1px solid">
+      <div class="col col-80">
+        <progress max="100" value="50"></progress>
+      </div>
+
+      <div class="col col-20">
+        <center>50%</center>
+      </div>
+
+    </div>
+
+    <div class="container row-center">
+
+    <center><div class="col">Centered!</div></center>
+
+    </div>
+
+    <div class="smallBoardlessContainer row-center">
+    <div class="row">
+      Title
+    </div>
+    </div>
+    <div class="row">
+      <div class="button-bar">
+       <a class="button" ng-click="click(1, assunto, 'IMPORTANCIA')" ng-class="{'button-positive':assunto.importancia==1}">1</a>
+       <a class="button" ng-click="click(2, assunto, 'IMPORTANCIA')" ng-class="{'button-positive':assunto.importancia==2}">2</a>
+       <a class="button" ng-click="click(3, assunto, 'IMPORTANCIA')" ng-class="{'button-positive':assunto.importancia==3}">3</a>
+       <a class="button" ng-click="click(4, assunto, 'IMPORTANCIA')" ng-class="{'button-positive':assunto.importancia==4}">4</a>
+       <a class="button" ng-click="click(5, assunto, 'IMPORTANCIA')" ng-class="{'button-positive':assunto.importancia==5}">5</a>
+     </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="item item-input">
+          <i class="icon ion-edit placeholder-icon"></i>
+          <input type="text" placeholder="Comentarios">
+        </label>
+      </div>
+    </div>
+
+    <div class="smallBoardlessContainer row-center">
+    <div class="row">
+      Title
+    </div>
+    </div>
+    <div class="row">
+      <div class="button-bar">
+       <a class="button" ng-click="click(1, assunto, 'COMPLEXIDADE')" ng-class="{'button-positive':assunto.complexidade==1}">1</a>
+       <a class="button" ng-click="click(2, assunto, 'COMPLEXIDADE')" ng-class="{'button-positive':assunto.complexidade==2}">2</a>
+       <a class="button" ng-click="click(3, assunto, 'COMPLEXIDADE')" ng-class="{'button-positive':assunto.complexidade==3}">3</a>
+       <a class="button" ng-click="click(4, assunto, 'COMPLEXIDADE')" ng-class="{'button-positive':assunto.complexidade==4}">4</a>
+       <a class="button" ng-click="click(5, assunto, 'COMPLEXIDADE')" ng-class="{'button-positive':assunto.complexidade==5}">5</a>
+     </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="item item-input">
+          <i class="icon ion-edit placeholder-icon"></i>
+          <input type="text" placeholder="Comentarios">
+        </label>
+      </div>
+    </div>
+    <div class-"row">
+      <div class="col">
+        <button class="button button-full button-positive" ng-click="slideNext()" ng-show="!isEnd()">
+          Próximo
+        </button>
+        <button class="button button-full button-positive" ng-click="slidePrev()" ng-show="isEnd()">
+          Fim
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
