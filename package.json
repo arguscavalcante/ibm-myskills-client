@@ -1,5 +1,5 @@
 {
-  "name": "MySkills",
+  "name": "ibm-myskills.client",
   "version": "1.1.1",
   "description": "MySkills: An Ionic project",
   "dependencies": {
