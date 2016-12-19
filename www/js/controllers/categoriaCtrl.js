@@ -67,7 +67,7 @@ app.controller('categoriaCtrl', function($scope, $rootScope, $ionicPlatform, $io
     }
 
   }).catch(function(error) {
-    console.log('deu ruim questionario: %j', error);
+    console.log('deu ruim questionario: %j', JSON.stringify(error));
   }).finally(function() {
     $ionicLoading.hide();
   });
@@ -87,7 +87,7 @@ app.controller('categoriaCtrl', function($scope, $rootScope, $ionicPlatform, $io
     console.log('eventos: %j', templates);
     $scope.templates = templates;
   }).catch(function(error) {
-    console.log('deu ruim template: %j', error);
+    console.log('deu ruim template: %j', JSON.stringify(error));
   }).finally(function() {});
 
   //Recupera o questionario do servico

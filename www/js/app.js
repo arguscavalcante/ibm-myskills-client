@@ -30,8 +30,8 @@ var app = angular.module('starter', ['ionic', 'SkillAssessment'])
     }, 101);
   })
   .config(function(LoopBackResourceProvider, $stateProvider, $urlRouterProvider) {
-    LoopBackResourceProvider.setUrlBase('http://ibm-myskills-server.mybluemix.net/api');
-    //LoopBackResourceProvider.setUrlBase('http://localhost:3000/api');
+    //LoopBackResourceProvider.setUrlBase('http://ibm-myskills-server.mybluemix.net/api');
+    LoopBackResourceProvider.setUrlBase('http://localhost:3000/api');
   })
   .config(function($stateProvider, $urlRouterProvider) {
 

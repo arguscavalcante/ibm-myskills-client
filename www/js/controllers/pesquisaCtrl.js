@@ -109,8 +109,8 @@ app.controller('pesquisaCtrl', function($scope, $rootScope, $ionicLoading, $ioni
     }*/
 
     var _categoria = {
-      email: $rootScope.usuario.email,
-      nome: $rootScope.usuario.nome,
+      codigoCadastro: $rootScope.usuario.codigoCadastro,
+      gom: $rootScope.usuario.gom,
       template: template.nome,
       tempo: template.tempo,
       nota: "",
@@ -252,7 +252,7 @@ app.controller('pesquisaCtrl', function($scope, $rootScope, $ionicLoading, $ioni
   function promptSubmission() {
     var confirmPopup = $ionicPopup.confirm({
       title: "Atenção",
-      template: "A avaliação <b> " + $scope.nome + "</b> será submetida. Deseja continuar?"
+      template: "A avaliação <b> " + $scope.nome + " será submetida. Deseja continuar?"
     });
 
     confirmPopup.then(function(res) {
@@ -285,7 +285,7 @@ app.controller('pesquisaCtrl', function($scope, $rootScope, $ionicLoading, $ioni
         $ionicLoading.hide();
         console.log(questionario);
       }).catch(function(error) {
-        console.log('deu ruim : %s', error);
+        console.log('deu ruim : %s', JSON.stringify(error));
       }).finally(function() {
         Time.stopCountDown();
         $ionicLoading.hide();

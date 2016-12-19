@@ -8,15 +8,13 @@ app.controller('loginCtrl', function($scope,  $ionicPopup, $rootScope, $state, $
   //
 
 var usuario = {
-		"nome": "",
-		"email":""
+		"codigoCadastro": "",
 };
 $scope.usuario = usuario;
 
 function load ()
 {
-	$scope.usuario.nome = JSON.parse($window.localStorage.getItem('nome'));
-	$scope.usuario.email = JSON.parse($window.localStorage.getItem('email'));
+	$scope.usuario.codigoCadastro = JSON.parse($window.localStorage.getItem('codigoCadastro'));
 }
 
 load();
@@ -25,13 +23,13 @@ load();
 
 	$scope.goTo = function(pagina)
 	{
-		if($scope.usuario.nome.length == 0 || $scope.usuario.email.length == 0)
+		if($scope.usuario.codigoCadastro.length == 0 || $scope.usuario.gom == 0)
 		{
-			$scope.infoAlert ("O nome e e-mail devem ser preenchidos","Atenção")
+			$scope.infoAlert ("O c&oacute;digo de cadastro e a posi&ccedil;&atilde;o devem ser preenchidos","Atenção")
 		}
 		else {
-			$window.localStorage.setItem('nome', JSON.stringify($scope.usuario.nome));
-			$window.localStorage.setItem('email', JSON.stringify($scope.usuario.email));
+			$window.localStorage.setItem('codigoCadastro', JSON.stringify($scope.usuario.codigoCadastro));
+			$window.localStorage.setItem('jobId', JSON.stringify($scope.usuario.gom));
 
 			$rootScope.usuario = $scope.usuario;
 			console.log($scope.usuario);

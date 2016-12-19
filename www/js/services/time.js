@@ -104,7 +104,7 @@ app.factory('Time', function($interval, $ionicPopup, $window, Avaliacao, $ionicL
   				}
 
   			}).catch(function (error) {
-  				console.log('deu ruim : %s', error);
+  				console.log('deu ruim : %s', JSON.stringify(error));
           var alertPopup = $ionicPopup.alert({
              title: 'Erro na submissão',
              template: 'Ocorreu um erro na submissão da avaliação <b>' +categoria.template+ '</b>. Tente novamente.'});
